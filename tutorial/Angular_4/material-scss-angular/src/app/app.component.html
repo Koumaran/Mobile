@@ -1,0 +1,24 @@
+<div [class]="theme">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+
+    <md-card>
+      <button md-raised-button color="primary" border-radius="8px">Primary</button>
+      <button md-raised-button color="accent">Accent</button>
+      <button md-raised-button color="warn">Warm</button>
+    </md-card>
+    <br>
+    <md-card>
+      <md-select placeholder="Theme"
+                [(ngModel)]="theme"
+                (change)="onThemeChange()">
+        <md-option value="my-theme">My Theme</md-option>
+        <md-option value="my-second-theme">My Second Theme</md-option>
+      </md-select>
+    </md-card>
+    <br>
+    <md-card>
+      <app-parent></app-parent>
+    </md-card>
+  </div>
