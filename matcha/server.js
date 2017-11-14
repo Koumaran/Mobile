@@ -5,7 +5,7 @@ const http = require('http');
 const app = express();
 
 // fichier API pour interragir avec MongoDB
-const api = require('./server/routes/api');
+const api = require('./server/routes/users');
 
 // parsers
 app.use(bodyParser.json());

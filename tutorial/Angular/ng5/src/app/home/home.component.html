@@ -1,0 +1,34 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add a bucket list item</p>
+  </div>
+  <div class="col">
+    <p>Your bucket list ({{ itemCount }})</p>
+  </div>
+</div>
+<div class="container color-light" [@goals]="goals.length">
+  <div class="col">
+    <p class="sm">Use this form below to add a new bucket list goal. what you want to do with your life</p>
+    <form>
+      <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
+      <button mat-button  (click)="addItem()"> {{ btnText }}</button>
+    </form>
+    <br>
+    <!-- Utilisation de Material design -->
+    <mat-card>
+        <mat-form-field>
+          <input matInput placeholder="Life goal.." [(ngModel)]="goalText">
+        </mat-form-field>
+        <br>
+        <button mat-button  (click)="addItem()"> {{ btnText }}</button>
+        <br>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+      {{ goal }}
+    </p>
+  </div>
+</div>
+
