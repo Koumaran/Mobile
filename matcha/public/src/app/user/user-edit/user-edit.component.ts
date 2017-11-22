@@ -10,7 +10,7 @@ import { User } from '../user';
 export class UserEditComponent implements OnInit {
   @Input() user: User;
   @Output() updateUserEvent = new EventEmitter();
-  userEdit = new User(0);
+  userEdit: User = new User();
   constructor() { }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class UserEditComponent implements OnInit {
 
   update() {
     this.userEdit.editable = false;
-    this.updateUserEvent.emit({original: this.user, edited: this.userEdit});
+    this.updateUserEvent.emit(this.userEdit);
   }
 
 }

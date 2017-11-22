@@ -18,6 +18,7 @@ let UserSchema = new mongoose.Schema({
   pseudo: { type: String, require: true},
   first_name: { type: String, require: true},
   last_name: { type: String, require: true},
+  password: { type: String, required: true},
   email: { type: String, require: true},
   editable: { type: Boolean, require: true},
 });
@@ -44,6 +45,15 @@ app.get("/users", (req, res, next) => {
       return res.json(users);
   })
 })
+
+app.get("/users/:pseudo:password", (req, res, next) => {
+  console.log("Server > GET '/users/:pseudo > ", req.params.pseudo);
+  User.findOne({pseudo: req.params.pseudo, password: req.params.password}, (err, user) => {
+    if (err) return res.json(err);
+    return res.json(user);
+  })
+})
+
 // Create User
 app.post("/users", (req, res, next) => {
   console.log("Server > POST '/users' > user ", req.body);
@@ -72,9 +82,6 @@ app.put("/users/:id", (req, res, next) => {
 
 })
 
-/* app.update("/users", (req, res, next) => {
-
-}) */
 
 app.all('*', (req, res, next) => {
   res.sendFile(path.resolve('./public/dist/index.html'));

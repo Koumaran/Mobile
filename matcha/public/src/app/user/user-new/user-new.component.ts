@@ -8,7 +8,7 @@ import { User } from './../user';
   encapsulation: ViewEncapsulation.None
 })
 export class UserNewComponent implements OnInit {
-  newUser = new User(0);
+  newUser: User = new User();
   @Output() createNewUserEvent = new EventEmitter();
 
   constructor() { }
@@ -19,6 +19,6 @@ export class UserNewComponent implements OnInit {
   create() {
     // call server to save
     this.createNewUserEvent.emit(this.newUser);
-    this.newUser = new User(0);
+    this.newUser = new User();
   }
 }

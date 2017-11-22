@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <div class="connexion" *ngIf="!passLost">
+    <h3>Se Connecter au Matcha</h3>
+    <form (submit)="loginUser()" novalidate>
+      <p class="full">
+        <label>Pseudo</label>
+        <input type="text" name="pseudo" [(ngModel)]="user.pseudo" required>
+      </p>
+      <p class="full">
+          <label>Mot de passe</label>
+          <input type="text" name="passWord" [(ngModel)]="user.password" required>
+        </p>
+        <p class="full">
+            <button type="submit">Se Connecter</button>
+        </p>
+        <p class="full">
+            <a (click)="passLost=!passLost">Mot de passe Oublier ?</a>
+        </p>
+    </form>
+  </div>
+  <div class="connexion" *ngIf="passLost">
+      <h3>Mot de passe perdu ?</h3>
+      <form>
+        <p class="full">
+          <label>Email</label>
+          <input type="text" name="email">
+        </p>
+        <p class="full">
+            <button>Envoyer un nouveau mot de passe</button>
+        </p>
+        <p class="full">
+            <a (click)="passLost=!passLost">Je peu me connecter!</a>
+        </p>
+      </form>
+    </div>
+  <div class="inscription">
+    <h3>Créer votre compte Matcha</h3>
+    <form>
+      <p>
+        <label>Nom</label>
+        <input type="text" name="lastName">
+      </p>
+      <p>
+          <label>Prénom</label>
+          <input type="text" name="firstName">
+      </p>
+      <p>
+          <label>E-mail</label>
+          <input type="text" name="email">
+      </p>
+      <p class="full">
+          <label>Mot de passe</label>
+          <input type="text" name="passWord">
+      </p>
+      <p class="full">
+          <label>Confirmer le mot de passe</label>
+          <input type="text" name="confirmedPassWord">
+      </p>
+      <p class="full">
+        <button>Envoyer</button>
+      </p>
+    </form>
+  </div>
+</div>
+

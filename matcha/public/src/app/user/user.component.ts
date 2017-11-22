@@ -1,4 +1,4 @@
-import { UserService } from './user.service';
+import { UserService } from '../services/user.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { User } from './user';
 
@@ -41,9 +41,9 @@ export class UserComponent implements OnInit {
     .catch(err => console.log(err));
   }
 
-  update(users: any) {
-    const i = this.users.indexOf(users.original);
-    this.users[i] = users.edited;
-
+  update(user: User) {
+    this._userService.update(user)
+      .then(status => this.getUsers())
+      .catch(err => console.log(err));
   }
 }
