@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16D5A7F81FC84B7400918394 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A7F71FC84B7400918394 /* AboutMeViewController.swift */; };
+		16D5A7FB1FC85DA200918394 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 16D5A7FA1FC85DA200918394 /* BullsEye.html */; };
 		3EC3FAAF1FC75E3700AC01E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3FAAE1FC75E3700AC01E9 /* AppDelegate.swift */; };
 		3EC3FAB11FC75E3700AC01E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC3FAB01FC75E3700AC01E9 /* ViewController.swift */; };
 		3EC3FAB41FC75E3700AC01E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC3FAB21FC75E3700AC01E9 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D5A7F71FC84B7400918394 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		16D5A7FA1FC85DA200918394 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		3EC3FAAB1FC75E3700AC01E9 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC3FAAE1FC75E3700AC01E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC3FAB01FC75E3700AC01E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +103,11 @@
 		3EC3FAAD1FC75E3700AC01E9 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				16D5A7FA1FC85DA200918394 /* BullsEye.html */,
 				3EC3FAAE1FC75E3700AC01E9 /* AppDelegate.swift */,
 				3EC3FAB01FC75E3700AC01E9 /* ViewController.swift */,
 				3EC3FAB21FC75E3700AC01E9 /* Main.storyboard */,
+				16D5A7F71FC84B7400918394 /* AboutMeViewController.swift */,
 				3EC3FADC1FC791A800AC01E9 /* AboutViewController.swift */,
 				3EC3FAB51FC75E3700AC01E9 /* Assets.xcassets */,
 				3EC3FAB71FC75E3700AC01E9 /* LaunchScreen.storyboard */,
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC3FAB91FC75E3700AC01E9 /* LaunchScreen.storyboard in Resources */,
+				16D5A7FB1FC85DA200918394 /* BullsEye.html in Resources */,
 				3EC3FAB61FC75E3700AC01E9 /* Assets.xcassets in Resources */,
 				3EC3FAB41FC75E3700AC01E9 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +271,7 @@
 			files = (
 				3EC3FADD1FC791A900AC01E9 /* AboutViewController.swift in Sources */,
 				3EC3FAB11FC75E3700AC01E9 /* ViewController.swift in Sources */,
+				16D5A7F81FC84B7400918394 /* AboutMeViewController.swift in Sources */,
 				3EC3FAAF1FC75E3700AC01E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -431,7 +439,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VV7JLT6T37;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sivanesan.BullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VV7JLT6T37;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.sivanesan.BullsEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
