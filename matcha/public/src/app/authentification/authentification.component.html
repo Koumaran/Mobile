@@ -1,17 +1,17 @@
 <div class="wrapper">
   <div class="connexion" *ngIf="!passLost">
     <h3>Se Connecter au Matcha</h3>
-    <form (submit)="loginUser()" novalidate>
+    <form #connexionForm="ngForm" (submit)="loginUser(connexionForm)" novalidate>
       <p class="full">
         <label>Pseudo</label>
-        <input type="text" name="pseudo" [(ngModel)]="user.pseudo" required>
+        <input type="text" name="pseudo" [ngClass]="error" ngModel required>
       </p>
       <p class="full">
           <label>Mot de passe</label>
-          <input type="text" name="passWord" [(ngModel)]="user.password" required>
+          <input type="password" [ngClass]="error" name="passWord" ngModel required>
         </p>
         <p class="full">
-            <button type="submit">Se Connecter</button>
+            <button [hidden]="connexionForm.invalid" type="submit">Se Connecter</button>
         </p>
         <p class="full">
             <a (click)="passLost=!passLost">Mot de passe Oublier ?</a>

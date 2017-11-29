@@ -2,13 +2,13 @@
   <nav>
     <ul>
       <li>
-        <a href="">Acceuil</a>
+        <a [routerLink]="">Acceuil</a>
       </li>
       <li>
-        <a href="">Mon profile</a>
+        <a [routerLink]="">Mon profile</a>
       </li>
       <li>
-        <a (click)="logged = false">Se déconecter</a>
+        <a (click)="loginService.logOut()">Se déconecter</a>
       </li>
     </ul>
   </nav>

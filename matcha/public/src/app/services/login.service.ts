@@ -1,15 +1,35 @@
 import { User } from './../user/user';
 import { UserService } from './user.service';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class LoginService {
   user: User;
+  redirectUrl: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
-  logIn(inconnu: User) {
-    this.userService.getUserByPseudo(inconnu.pseudo, inconnu.pseudo).then(user => this.user = user).catch(err => console.log(err));
+  isLoggedIn(): Boolean {
+    if (this.user !== undefined) {
+      return true;
+    }
+    return false;
+  }
+
+  logIn(inconnu: any) {
+    console.log('In logIn');
+    console.log(inconnu);
+    this.userService.getUserByPseudo(inconnu)
+        .subscribe(user => this.user = user);
+    console.log(this.user);
+
     return this.user;
+  }
+
+  logOut() {
+    console.log('logOUt');
+    this.user = undefined;
+    this.router.navigate(['/login']);
   }
 }

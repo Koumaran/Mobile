@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './user/user';
 
 @Component({
   selector: 'mat-root',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+  user: User;
   logged: Boolean = false;
   route: Router;
 
@@ -15,7 +17,4 @@ export class AppComponent {
     this.route = routes;
   }
 
-  changeLog(logged) {
-    this.logged = logged;
-  }
 }

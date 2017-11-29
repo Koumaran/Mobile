@@ -1,3 +1,4 @@
+import { MessageService } from './../services/message.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-  constructor() { }
+  constructor(public messageService: MessageService) { }
 
   ngOnInit() {
   }

@@ -39,23 +39,24 @@ app.use(express.static(__dirname + '/public/dist'));
 // Routes
 
 // Get Users
-app.get("/users", (req, res, next) => {
+app.get("/users/", (req, res, next) => {
   console.log("Server > GET '/users' ");
   User.find({}, (err, users)=>{
       return res.json(users);
   })
 })
 
-app.get("/users/:pseudo:password", (req, res, next) => {
-  console.log("Server > GET '/users/:pseudo > ", req.params.pseudo);
-  User.findOne({pseudo: req.params.pseudo, password: req.params.password}, (err, user) => {
+app.post("/users/:pseudo", (req, res, next) => {
+  console.log("Server > POST '/users' > pseudo =  ", req.body);
+  const user = req.body;
+  User.findOne({pseudo: user.pseudo, password: user.password}, (err, user) => {
     if (err) return res.json(err);
     return res.json(user);
   })
 })
 
 // Create User
-app.post("/users", (req, res, next) => {
+app.post("/users/:id", (req, res, next) => {
   console.log("Server > POST '/users' > user ", req.body);
   delete req.body._id;
   User.create(req.body, (err, user)=>{

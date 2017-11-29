@@ -9,11 +9,7 @@ import { User } from './user';
   encapsulation: ViewEncapsulation.None
 })
 export class UserComponent implements OnInit {
-  users: Array<User> = [
-  /*   new User(1, 'jega', 'jegathas', 'sivanesan', 'email@email.com'),
-    new User(2, 'jega', 'jegathas', 'sivanesan', 'email@email.com'),
-    new User(3, 'jega', 'jegathas', 'sivanesan', 'email@email.com') */
-  ];
+  users: User[];
 
   constructor(private _userService: UserService) { }
 
@@ -21,29 +17,25 @@ export class UserComponent implements OnInit {
     this.getUsers();
   }
 
-  getUsers() {
+  getUsers(): void {
     this._userService.getUsers()
-      .then(users => this.users = users)
-      .catch(err => console.log(err));
+      .subscribe(users => this.users = users);
+  }
+  // effectuer si les donner sont correcte.... ici ou en aval
+  create(newUser: User): void {
+    this._userService.create(newUser)
+      .subscribe(user => {
+        this.users.push(user);
+      });
   }
 
-  create(user: User) {
-    this._userService.create(user)
-      .then(status => this.getUsers())
-      .catch(err => console.log(err));
-
-    this.users.push(user);
-  }
-
-  destroy(user: User) {
-    this._userService.destroy(user)
-    .then(status => this.getUsers())
-    .catch(err => console.log(err));
+  destroy(user: User): void {
+    this.users = this.users.filter(u => u !== user);
+    this._userService.destroy(user).subscribe();
   }
 
   update(user: User) {
     this._userService.update(user)
-      .then(status => this.getUsers())
-      .catch(err => console.log(err));
+      .subscribe(users => console.log(users));
   }
 }
