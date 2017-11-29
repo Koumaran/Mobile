@@ -10,14 +10,31 @@ app.use(morgan('dev'));
 // Mongo Database
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost:27017/matcha', { useMongoClient: true, promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful to matcha'))
+const matcha = mongoose.connect('mongodb://localhost:27017/matcha', { useMongoClient: true, promiseLibrary: require('bluebird') })
+  .then((db) => {
+    console.log('connection succesful to matcha');
+    db.collection("users").drop((err, delOk) => {
+      console.log('Collection: Users dropped');
+    });
+    db.createCollection("users", (err, res) => {
+      console.log("Collection: Users creaed");
+    });
+    var myobj = [
+      { pseudo: "jega", firstName: "sivanesan", lastName: "jegathas", password: "coco", email: "jsivanes42@gmail.com", editable: false },
+      { pseudo: "kirt's", firstName: "kugathas", lastName: "kirthana", password: "toto", email: "tamilby94@gmail.com", editable: false }
+  ];
+    db.collection("users").insert(myobj, (err2, res) => {
+      if (err2) throw err;
+      console.log("all document inserted");
+    })
+  })
   .catch((err) => console.error(err));
+
 
 let UserSchema = new mongoose.Schema({
   pseudo: { type: String, require: true},
-  first_name: { type: String, require: true},
-  last_name: { type: String, require: true},
+  firstName: { type: String, require: true},
+  lastName: { type: String, require: true},
   password: { type: String, required: true},
   email: { type: String, require: true},
   editable: { type: Boolean, require: true},
