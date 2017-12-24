@@ -1,11 +1,11 @@
 import { MessageService } from './../services/message.service';
 import { NgForm } from '@angular/forms';
 
-import { User } from './../user/user';
 import { AppComponent } from './../app.component';
 import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { User } from '../user/user';
 
 @Component({
   selector: 'mat-authentification',
@@ -31,13 +31,13 @@ export class AuthentificationComponent implements OnInit {
 
   loginUser(f: NgForm) {
     if (f.valid) {
-      if ((this.user = this.loginService.logIn(f.value)) === undefined) {
-        this.messageService.add('Identificant ou Mot de pass incorrecte');
-        return ;
+      this.loginService.logIn(f.value);
+      if (this.loginService.user) {
+        console.log('User connected');
+        this.router.navigate(['']);
       }
+    }
       console.log(this.user);
       this.router.navigate(['']);
-    }
-     console.log(f.valid);
   }
 }

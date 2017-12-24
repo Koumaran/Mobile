@@ -18,13 +18,16 @@ export class LoginService {
   }
 
   logIn(inconnu: any) {
-    console.log('In logIn');
+    console.log('In logIn == variable reçu');
     console.log(inconnu);
     this.userService.getUserByPseudo(inconnu)
-        .subscribe(user => this.user = user);
-    console.log(this.user);
-
-    return this.user;
+        .subscribe(user => {
+          this.user = user;
+          this.router.navigate(['']);
+        },
+        (err) => {
+          console.log(err);
+        });
   }
 
   logOut() {
