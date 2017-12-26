@@ -20,8 +20,8 @@ const matcha = mongoose.connect('mongodb://localhost:27017/matcha', { useMongoCl
       console.log("Collection: Users creaed");
     });
     var myobj = [
-      { pseudo: "jega", firstName: "sivanesan", lastName: "jegathas", password: "coco", email: "jsivanes42@gmail.com", editable: false },
-      { pseudo: "kirt's", firstName: "kugathas", lastName: "kirthana", password: "toto", email: "tamilby94@gmail.com", editable: false }
+      { pseudo: "jega", firstName: "sivanesan", lastName: "jegathas", passWord: "coco", email: "jsivanes42@gmail.com", editable: false },
+      { pseudo: "kirt's", firstName: "kugathas", lastName: "kirthana", passWord: "toto", email: "tamilby94@gmail.com", editable: false }
   ];
     db.collection("users").insert(myobj, (err2, res) => {
       if (err2) throw err;
@@ -35,7 +35,7 @@ let UserSchema = new mongoose.Schema({
   pseudo: { type: String, require: true},
   firstName: { type: String, require: true},
   lastName: { type: String, require: true},
-  password: { type: String, required: true},
+  passWord: { type: String, required: true},
   email: { type: String, require: true},
   editable: { type: Boolean, require: true},
 });
@@ -66,8 +66,9 @@ app.get("/users/", (req, res, next) => {
 app.post("/users/:pseudo", (req, res, next) => {
   console.log("Server > POST '/users' > pseudo =  ", req.body);
   const user = req.body;
-  User.findOne({pseudo: user.pseudo, password: user.password}, (err, user) => {
+  User.findOne({pseudo: user.pseudo, passWord: user.passWord}, (err, user) => {
     if (err) return res.json(err);
+    console.log(user);
     return res.json(user);
   })
 })

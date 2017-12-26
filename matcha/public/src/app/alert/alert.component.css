@@ -1,0 +1,17 @@
+.error-alert {
+  height: auto;
+  position: absolute;
+  top: 0;
+  background-color: firebrick;
+  color: white;
+  width: 100%;
+  margin-left: -1.5em;
+}
+
+.message-box span {
+  margin-left: 8px;
+  float: left;
+}
+.message-box button {
+  float: right;
+}

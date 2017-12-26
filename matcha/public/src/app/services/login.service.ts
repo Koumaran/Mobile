@@ -2,32 +2,48 @@ import { User } from './../user/user';
 import { UserService } from './user.service';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { MessageService } from './message.service';
 
 @Injectable()
 export class LoginService {
   user: User;
   redirectUrl: string;
+  userURL = '/users/';
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private _http: HttpClient, private router: Router, private messageService: MessageService) { }
 
   isLoggedIn(): Boolean {
-    if (this.user !== undefined) {
+    if (this.user) {
       return true;
     }
     return false;
   }
 
+
   logIn(inconnu: any) {
-    console.log('In logIn == variable reçu');
-    console.log(inconnu);
-    this.userService.getUserByPseudo(inconnu)
-        .subscribe(user => {
+    this._http.post<User>(this.userURL + inconnu.pseudo, inconnu).subscribe(
+      (user) => {
+        if (user) {
           this.user = user;
           this.router.navigate(['']);
-        },
-        (err) => {
-          console.log(err);
-        });
+        } else {
+          this.messageService.add('Désoler mais tu t\'es trompé sur quelque chose!');
+        }
+      },
+      (err) => {
+        console.log(err);
+    });
+    /* this.userService.getUserByPseudo(inconnu)
+        .subscribe(
+          (user) => {
+            console.log(user);
+            this.user = user;
+            this.router.navigate(['']);
+          },
+          (err) => {
+            console.log(err);
+        }); */
   }
 
   logOut() {

@@ -21,6 +21,7 @@ export class UserService {
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
+      console.log('handleError :');
       console.log(error); // log to console instead
 
       // let the app keep running by returning an empty result
@@ -44,13 +45,9 @@ export class UserService {
   }
 
   getUserByPseudo(inconnu: any): Observable<User> {
-    console.log('in getUserby pseudo');
-    console.log(inconnu);
-    const user = this._http.post<User>(this.userURL + inconnu.pseudo, inconnu).pipe(
+    return this._http.post<User>(this.userURL + inconnu.pseudo, inconnu).pipe(
       catchError(this.handleError<User>('getUserByPseudo = ${pseudo}'))
     );
-    console.log(user);
-    return user;
   }
 
   create(newUser: User): Observable<User> {

@@ -32,12 +32,6 @@ export class AuthentificationComponent implements OnInit {
   loginUser(f: NgForm) {
     if (f.valid) {
       this.loginService.logIn(f.value);
-      if (this.loginService.user) {
-        console.log('User connected');
-        this.router.navigate(['']);
-      }
     }
-      console.log(this.user);
-      this.router.navigate(['']);
   }
 }
