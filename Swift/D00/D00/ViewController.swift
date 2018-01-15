@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         let text = sender.currentTitle!
         print(text)
         if (text == "0") {
-            if (number.count > 1) {
+            if (screenLabel.text != "0") {
                 number += "\(text)"
                 screenLabel.text = number
             }
@@ -55,27 +55,35 @@ class ViewController: UIViewController {
         screenLabel.text = "0"
     }
     
+    func clearNoPrint() {
+        number = ""
+        leftNumber = ""
+        rightNumber = ""
+        currentOperation = .NULL
+    }
+    
     func CalculateBtn(operation: Operation) {
-        print("caluculate start")
         if (number != "") {
-            print("number different of null")
             rightNumber = (leftNumber != "") ? number : ""
             leftNumber = (leftNumber == "") ? number : leftNumber
             number = ""
             currentOperation = (currentOperation == .NULL) ? operation : currentOperation
+            print("Operation : \(leftNumber) \(currentOperation) \(rightNumber)")
             if (rightNumber != "") {
-                print("in operation")
                 if currentOperation == .Add {
                     leftNumber = "\(Int(leftNumber)! + Int(rightNumber)!)"
                 } else if currentOperation == .Subtract {
                     leftNumber = "\(Int(leftNumber)! - Int(rightNumber)!)"
                 } else if currentOperation == .Multiply {
-                    leftNumber = "\(Int(leftNumber)! * Int(rightNumber)!)"
+                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)! * Int(rightNumber)!)"
                 } else if currentOperation == .Divide {
-                    leftNumber = "\(Int(leftNumber)! / Int(rightNumber)!)"
+                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)! / Int(rightNumber)!)"
                 }
                 currentOperation = operation
                 screenLabel.text = leftNumber
+                if leftNumber == "Erreur" || operation == .Equal {
+                    clearNoPrint()
+                }
             }
         }
     }
@@ -100,22 +108,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func subtractBtn(_ sender: UIButton) {
+        print("Soustraction")
         CalculateBtn(operation: .Subtract)
     }
     
     @IBAction func addBtn(_ sender: UIButton) {
+        print("Addition")
         CalculateBtn(operation: .Add)
     }
     
     @IBAction func multiplyBtn(_ sender: UIButton) {
+        print("Multiplication")
         CalculateBtn(operation: .Multiply)
     }
     
     @IBAction func divideBtn(_ sender: UIButton) {
+        print("Division")
         CalculateBtn(operation: .Divide)
     }
     
     @IBAction func equalBtn(_ sender: UIButton) {
+        print("Résultat")
         CalculateBtn(operation: .Equal)
     }
 
