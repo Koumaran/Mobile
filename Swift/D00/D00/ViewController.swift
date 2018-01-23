@@ -71,16 +71,17 @@ class ViewController: UIViewController {
             print("Operation : \(leftNumber) \(currentOperation) \(rightNumber)")
             if (rightNumber != "") {
                 if currentOperation == .Add {
-                    leftNumber = "\(Int(leftNumber)! + Int(rightNumber)!)"
+                    leftNumber = "\(Int(leftNumber)!.addingReportingOverflow(Int(rightNumber)!).partialValue)"
                 } else if currentOperation == .Subtract {
-                    leftNumber = "\(Int(leftNumber)! - Int(rightNumber)!)"
+                    leftNumber = "\(Int(leftNumber)!.subtractingReportingOverflow(Int(rightNumber)!).partialValue)"
                 } else if currentOperation == .Multiply {
-                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)! * Int(rightNumber)!)"
+                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)!.multipliedReportingOverflow(by: Int(rightNumber)!).partialValue)"
                 } else if currentOperation == .Divide {
-                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)! / Int(rightNumber)!)"
+                    leftNumber = (rightNumber == "0") ? "Erreur" : "\(Int(leftNumber)!.dividedReportingOverflow(by: Int(rightNumber)!).partialValue)"
                 }
                 currentOperation = operation
                 screenLabel.text = leftNumber
+                print("Result :  \(leftNumber)")
                 if leftNumber == "Erreur" || operation == .Equal {
                     clearNoPrint()
                 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,27 +21,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="D00" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rcH-oa-hqg">
-                                <rect key="frame" x="16" y="16" width="343" height="635"/>
+                                <rect key="frame" x="16" y="16" width="382" height="704"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Wd-1QP">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="137.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="152.33333333333334"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-kc-0fe">
-                                        <rect key="frame" x="0.0" y="145.5" width="343" height="489.5"/>
+                                        <rect key="frame" x="0.0" y="160.33333333333331" width="382" height="543.66666666666674"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xsg-JP-upl">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="102.33333333333333"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5n-vt-b6n" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.65099567169999994" green="0.6509685516" blue="0.650981009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="AC">
@@ -55,7 +55,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuS-am-KOK" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="115" y="0.0" width="161.5" height="91.5"/>
+                                                        <rect key="frame" x="127" y="0.0" width="180" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.65099567169999994" green="0.6509685516" blue="0.650981009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="NEG">
@@ -69,7 +69,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-SD-rfW" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="284.5" y="0.0" width="58.5" height="91.5"/>
+                                                        <rect key="frame" x="315" y="0.0" width="67" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.9352051616" green="0.60154914859999997" blue="0.26261508459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="/">
@@ -85,10 +85,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-rc-JNI">
-                                                <rect key="frame" x="0.0" y="99.5" width="343" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="110.33333333333334" width="382" height="102.33333333333334"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amH-GF-xCx" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="7">
@@ -102,7 +102,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy6-db-jGh" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="94" y="0.0" width="85.5" height="91.5"/>
+                                                        <rect key="frame" x="103.66666666666669" y="0.0" width="95.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="8">
@@ -116,7 +116,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb6-vY-QR4" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="187.5" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="95.666666666666686" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="9">
@@ -130,7 +130,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2M-y8-FXf" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="281.5" y="0.0" width="61.5" height="91.5"/>
+                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="71.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.9352051616" green="0.60154914859999997" blue="0.26261508459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="*">
@@ -146,10 +146,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wia-wA-uS2">
-                                                <rect key="frame" x="0.0" y="199" width="343" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="220.66666666666666" width="382" height="102.33333333333334"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWA-GK-Hkq" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="4">
@@ -163,7 +163,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUs-vV-Qdh" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="94" y="0.0" width="85.5" height="91.5"/>
+                                                        <rect key="frame" x="103.66666666666669" y="0.0" width="95.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="5">
@@ -177,7 +177,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-o9-5lf" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="187.5" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="95.666666666666686" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="6">
@@ -191,7 +191,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abW-4c-hZt" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="281.5" y="0.0" width="61.5" height="91.5"/>
+                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="71.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.9352051616" green="0.60154914859999997" blue="0.26261508459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="-">
@@ -207,10 +207,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-1J-E9J">
-                                                <rect key="frame" x="0.0" y="298.5" width="343" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="331" width="382" height="102.33333333333331"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udz-UH-0V7" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="1">
@@ -224,7 +224,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-zB-goy" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="94" y="0.0" width="85.5" height="91.5"/>
+                                                        <rect key="frame" x="103.66666666666669" y="0.0" width="95.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="2">
@@ -238,7 +238,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sa-WY-pYy" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="187.5" y="0.0" width="86" height="91.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="95.666666666666686" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="3">
@@ -252,7 +252,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-bh-iXD" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="281.5" y="0.0" width="61.5" height="91.5"/>
+                                                        <rect key="frame" x="310.66666666666669" y="0.0" width="71.333333333333314" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.9352051616" green="0.60154914859999997" blue="0.26261508459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="+">
@@ -268,10 +268,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xi8-9B-KTV">
-                                                <rect key="frame" x="0.0" y="398" width="343" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="441.33333333333326" width="382" height="102.33333333333337"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgP-KW-tYR" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="91.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.20000547169999999" green="0.19999569649999999" blue="0.20000022649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="0">
@@ -285,7 +285,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-Mz-x3L" customClass="RoundButtonClass" customModule="D00" customModuleProvider="target">
-                                                        <rect key="frame" x="179.5" y="0.0" width="163.5" height="91.5"/>
+                                                        <rect key="frame" x="199" y="0.0" width="183" height="102.33333333333333"/>
                                                         <color key="backgroundColor" red="0.9352051616" green="0.60154914859999997" blue="0.26261508459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <state key="normal" title="=">
