@@ -63,33 +63,35 @@ class Deck : NSObject {
 
     static let allCards : [Card] = allSpades + allHearts + allDiamonds + allClubs
     
-    var cards : [Card] = []
+    var cards : [Card] = allCards
     var discards: [Card] = []
     var outs : [Card] = []
     
     init(shuffle: Bool) {
-        cards = Deck.allCards
         if shuffle {
             cards.shuffle()
         }
     }
     
     override var description: String {
-        var str : String = ""
-        for card in cards {
-            str.append(card.description)
-        }
-        return str
+        let str : [String] = cards.map({"\($0)"})
+        return str.joined(separator: "\n")
     }
     
     func draw() -> Card? {
-        let card : Card? = cards.first
+        let card : Card? = cards.removeFirst()
         if card != nil {
-            outs.append(card)
+            outs.append(card!)
         }
         return card
     }
     
+    func fold(c: Card) {
+        if let i = outs.index(of: c) {
+            let card = outs.remove(at: i)
+            discards.append(card)
+        }
+    }
 }
 
 extension Array {
@@ -100,8 +102,22 @@ extension Array {
     }
 }
 
-var game = Deck(shuffle: true)
-print(game.cards.description)
+var shuffledDeck = Deck(shuffle: true)
+var shortedDeck = Deck(shuffle: false)
 
+print("Shuffled Deck:\n", shuffledDeck, "\n")
+print("Shorted Deck:\n", shortedDeck, "\n")
 
+print("1 Shuffled Deck Draw: ", shuffledDeck.draw()!)
+print("1 Shorted Deck Draw: ", shortedDeck.draw()!, "\n")
 
+print("2 Shuffled Deck Draw : ", shuffledDeck.draw()!)
+print("2 Shorted Deck Draw: ", shortedDeck.draw()!, "\n")
+
+let aceSpade = Card(c: Color.Spade, v: Value.Ace)
+
+shuffledDeck.fold(c: aceSpade)
+shortedDeck.fold(c: aceSpade)
+
+print("Shuffled Deck Folded Card :", shuffledDeck.discards)
+print("Shorted Deck Folded Card :", shortedDeck.discards)
