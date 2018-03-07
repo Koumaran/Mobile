@@ -1,7 +1,0 @@
-<h1>User component</h1>
-{{ users | json }}
-<mat-user-new (createNewUserEvent)="create($event)" ></mat-user-new>
-<mat-user-list
-  [users]="users"
-  (destroyUserEvent)="destroy($event)"
-  (updateUserEvent)="update($event)" ></mat-user-list>

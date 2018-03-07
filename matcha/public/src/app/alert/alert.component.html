@@ -1,6 +1,0 @@
-<div *ngIf="messageService.messages.length" class="error-alert">
-  <div class="message-box">
-    <span *ngFor="let message of messageService.messages"> {{message}} </span>
-    <button class="clear" (click)="messageService.clear()">X</button>
-  </div>
-</div>
