@@ -83,6 +83,7 @@ optString = nil  // ICI CRASH car optString a était optionel UnWraped donc ne p
 var button: UIButton? = UIButton()
 CFGetRetainCount(button)
 
+
 weak var buttonRef = button // weak permet de ne pas augmenter le nombre de réference a un élément, retirer le mot clé * weak * pour voir la différence
 CFGetRetainCount(button)
 
