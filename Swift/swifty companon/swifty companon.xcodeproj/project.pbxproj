@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E540CBC21357B240069603E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E540CBB21357B240069603E /* ProfileModel.swift */; };
 		3E6F4C7021147B140079DCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C6F21147B140079DCCE /* AppDelegate.swift */; };
 		3E6F4C7221147B140079DCCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7121147B140079DCCE /* ViewController.swift */; };
 		3E6F4C7521147B140079DCCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7321147B140079DCCE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E540CBB21357B240069603E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		3E6F4C6C21147B140079DCCE /* swifty companon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty companon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6F4C6F21147B140079DCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6F4C7121147B140079DCCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3EF7370E213569FB007693CB /* ResultCell.swift */,
 				3E6F4C7321147B140079DCCE /* Main.storyboard */,
 				3EF7371021356EA3007693CB /* ProfileViewController.swift */,
+				3E540CBB21357B240069603E /* ProfileModel.swift */,
 				3E6F4C8121147E800079DCCE /* WebService.swift */,
 				3E6F4C7621147B150079DCCE /* Assets.xcassets */,
 				3E6F4C7821147B150079DCCE /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				3E6F4C8221147E800079DCCE /* WebService.swift in Sources */,
 				3E6F4C7221147B140079DCCE /* ViewController.swift in Sources */,
 				3EF7371121356EA3007693CB /* ProfileViewController.swift in Sources */,
+				3E540CBC21357B240069603E /* ProfileModel.swift in Sources */,
 				3EF7370F213569FB007693CB /* ResultCell.swift in Sources */,
 				3E6F4C7021147B140079DCCE /* AppDelegate.swift in Sources */,
 			);

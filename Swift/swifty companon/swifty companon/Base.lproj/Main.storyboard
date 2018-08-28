@@ -101,9 +101,61 @@
                     <view key="view" contentMode="scaleToFill" id="una-ZE-Sld">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-3r-gQe">
+                                <rect key="frame" x="0.0" y="44" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0f5-cs-79t"/>
+                                    <constraint firstAttribute="width" secondItem="pIZ-3r-gQe" secondAttribute="height" multiplier="1:1" id="Ykm-WW-bY6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5BU-YQ-Xgz">
+                                <rect key="frame" x="158" y="90" width="207" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNb-D4-TiZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS2-7X-WY3">
+                                        <rect key="frame" x="0.0" y="28" width="207" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMe-hd-K3G">
+                                        <rect key="frame" x="0.0" y="56" width="207" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBk-Nm-CM3">
+                                        <rect key="frame" x="0.0" y="84" width="207" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pIZ-3r-gQe" firstAttribute="leading" secondItem="Hfw-Jx-b6O" secondAttribute="leading" id="Ku9-Sj-rNN"/>
+                            <constraint firstItem="5BU-YQ-Xgz" firstAttribute="leading" secondItem="pIZ-3r-gQe" secondAttribute="trailing" constant="8" id="T4f-Dd-Hnf"/>
+                            <constraint firstItem="Hfw-Jx-b6O" firstAttribute="trailing" secondItem="5BU-YQ-Xgz" secondAttribute="trailing" constant="10" id="hGh-Lx-bSd"/>
+                            <constraint firstItem="5BU-YQ-Xgz" firstAttribute="bottom" secondItem="pIZ-3r-gQe" secondAttribute="bottom" id="ubC-Uj-Jw5"/>
+                            <constraint firstItem="pIZ-3r-gQe" firstAttribute="top" secondItem="Hfw-Jx-b6O" secondAttribute="top" id="vtp-gg-dHv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hfw-Jx-b6O"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="eMe-hd-K3G" id="TLI-Xk-Jqh"/>
+                        <outlet property="firstNameLabel" destination="ZNb-D4-TiZ" id="uyG-Z9-eIX"/>
+                        <outlet property="lastNameLabel" destination="HS2-7X-WY3" id="UEd-dY-KKk"/>
+                        <outlet property="phoneLabel" destination="BBk-Nm-CM3" id="MdT-1P-bhH"/>
+                        <outlet property="photoView" destination="pIZ-3r-gQe" id="HNa-bq-pXU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9A-IH-bUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

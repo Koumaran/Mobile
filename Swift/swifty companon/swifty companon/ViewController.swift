@@ -64,9 +64,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(users[indexPath.row].login) is selected : \(users[indexPath.row].url)")
-        let profileView = self.storyboard?.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
-        self.present(profileView, animated: true, completion: nil)
+        let url = users[indexPath.row].url
+        print("\(users[indexPath.row].login) is selected : \(url)")
+        webService.getProfile(url: url) { profile, error in
+            guard let profile = profile, error == nil else {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async {
+                let profileView = self.storyboard?.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
+                profileView.profile = profile
+                self.navigationController?.pushViewController(profileView, animated: true)
+            }
+        }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -10,16 +10,28 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var profile: Profile!
+    
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = "Coco"
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Retour", style: .plain, target: #selector(goBack), action: nil)
+        
+        setupProfileView()
     }
     
-    @objc func goBack() {
-        self.dismiss(animated: true, completion: nil)
+    private func setupProfileView() {
+        self.navigationItem.title = profile.login
+        if profile.imageConverted != nil {
+            photoView.image = profile.imageConverted!
+        }
+        firstNameLabel.text = profile.firstName
+        lastNameLabel.text = profile.lastName
+        emailLabel.text = profile.email
+        phoneLabel.text = profile.phone ?? ""
     }
-
-
 }

@@ -84,6 +84,30 @@ class WebService {
         }.resume()
     }
     
+    func getProfile(url: String, completion: @escaping (Profile?, Error?) -> Void) {
+        guard let token = token else {
+            self.getToken()
+            return
+        }
+        if let url = URL(string: "\(url)?access_token=\(token.accessToken!)") {
+            URLSession.shared.dataTask(with: url) { data, _, error in
+                guard let data = data , error == nil else {
+                    completion(nil, error)
+                    return
+                }
+                do {
+                    let profile: Profile = try JSONDecoder().decode(Profile.self, from: data)
+                    print(profile)
+                    completion(profile, nil)
+                } catch let jsonErr {
+                    completion(nil, jsonErr)
+                }
+            }.resume()
+        }
+    }
+    
+    
+    // mettre en place pour notification center et gerer avec l'auto cehck du token
     func checkTokenValidity() {
         if let token = token, let expireTime = token.expiresIn {
             let now = Date()
@@ -91,6 +115,8 @@ class WebService {
             if now > time! {
                 getToken()
             }
+        } else {
+            getToken()
         }
     }
 }
