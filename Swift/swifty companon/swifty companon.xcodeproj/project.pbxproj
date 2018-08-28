@@ -13,6 +13,8 @@
 		3E6F4C7721147B150079DCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7621147B150079DCCE /* Assets.xcassets */; };
 		3E6F4C7A21147B150079DCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7821147B150079DCCE /* LaunchScreen.storyboard */; };
 		3E6F4C8221147E800079DCCE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C8121147E800079DCCE /* WebService.swift */; };
+		3EF7370F213569FB007693CB /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7370E213569FB007693CB /* ResultCell.swift */; };
+		3EF7371121356EA3007693CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7371021356EA3007693CB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3E6F4C7921147B150079DCCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E6F4C7B21147B150079DCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E6F4C8121147E800079DCCE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		3EF7370E213569FB007693CB /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		3EF7371021356EA3007693CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				3E6F4C6F21147B140079DCCE /* AppDelegate.swift */,
 				3E6F4C7121147B140079DCCE /* ViewController.swift */,
+				3EF7370E213569FB007693CB /* ResultCell.swift */,
 				3E6F4C7321147B140079DCCE /* Main.storyboard */,
+				3EF7371021356EA3007693CB /* ProfileViewController.swift */,
 				3E6F4C8121147E800079DCCE /* WebService.swift */,
 				3E6F4C7621147B150079DCCE /* Assets.xcassets */,
 				3E6F4C7821147B150079DCCE /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				3E6F4C8221147E800079DCCE /* WebService.swift in Sources */,
 				3E6F4C7221147B140079DCCE /* ViewController.swift in Sources */,
+				3EF7371121356EA3007693CB /* ProfileViewController.swift in Sources */,
+				3EF7370F213569FB007693CB /* ResultCell.swift in Sources */,
 				3E6F4C7021147B140079DCCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
