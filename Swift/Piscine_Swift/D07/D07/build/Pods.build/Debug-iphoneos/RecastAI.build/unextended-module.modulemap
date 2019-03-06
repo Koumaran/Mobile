@@ -1,0 +1,10 @@
+framework module RecastAI {
+  umbrella header "RecastAI-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RecastAI.__Swift {
+    exclude header "RecastAI-Swift.h"
+}

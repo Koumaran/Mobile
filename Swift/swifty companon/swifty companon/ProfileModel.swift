@@ -48,3 +48,30 @@ struct Profile: Decodable {
         }
     }
 }
+
+struct CursusUsers: Decodable {
+    let grade: String?
+    let level: Double?
+    let id: Int?
+    let beginAt: String?
+    let endAt: String?
+    let cursusId: Int?
+    let hasCoalition: Bool
+}
+
+struct Cursus: Decodable {
+    let id: Int?
+    let createdAt: String?
+    let name: String?
+    let slug: String?
+}
+struct Skills: Decodable {
+    let id: Int?
+    let name: String?
+    let level: Double?
+}
+struct ProjectsUsers:Decodable {
+    let id: Int
+    let occurrence: Int
+    let finalMark: Int
+}

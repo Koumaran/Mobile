@@ -60,7 +60,7 @@ class APIController {
                         }
                     } catch let err as NSError {
                         print("err : \(err)")
-                        DispatchQueue.main.async() {
+                        DispatchQueue.main.async() {.
                             self.delegate?.handleError(error: err)
                         }
                     }

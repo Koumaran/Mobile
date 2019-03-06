@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             personnage.append(person)
             tableView.reloadData()
         }
-    
+        
     }
 }
 

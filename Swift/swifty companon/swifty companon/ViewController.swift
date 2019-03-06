@@ -66,14 +66,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let url = users[indexPath.row].url
         print("\(users[indexPath.row].login) is selected : \(url)")
+        let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.startAnimating()
+        
         webService.getProfile(url: url) { profile, error in
             guard let profile = profile, error == nil else {
                 print(error!)
+                DispatchQueue.main.sync {
+                    activityIndicator.removeFromSuperview()
+                }
                 return
             }
             DispatchQueue.main.async {
                 let profileView = self.storyboard?.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
                 profileView.profile = profile
+                activityIndicator.removeFromSuperview()
                 self.navigationController?.pushViewController(profileView, animated: true)
             }
         }

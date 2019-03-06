@@ -1,0 +1,11 @@
+framework module RecastAI {
+  umbrella header "RecastAI-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RecastAI.Swift {
+    header "RecastAI-Swift.h"
+    requires objc
+}
