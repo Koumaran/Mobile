@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ProfileHeaderView" id="iN0-l3-epB" customClass="ProfileHeaderView" customModule="swifty_companon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="726" height="799"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globalBakcground" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-o2-HfJ">
+                    <rect key="frame" x="0.0" y="0.0" width="726" height="512"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uX6-sU-BNu">
+                    <rect key="frame" x="0.0" y="0.0" width="275.5" height="275.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uX6-sU-BNu" secondAttribute="height" multiplier="1:1" id="S6E-yx-jLX"/>
+                        <constraint firstAttribute="width" constant="200" id="kK7-zz-N3U"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="kK7-zz-N3U"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="S6E-yx-jLX"/>
+                            <include reference="kK7-zz-N3U"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="kK7-zz-N3U"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i8B-lL-R1A">
+                    <rect key="frame" x="16" y="327.5" width="694" height="143.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIZ-dY-xLe">
+                            <rect key="frame" x="0.0" y="0.0" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluation points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-RN-BNh">
+                            <rect key="frame" x="0.0" y="20.5" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cursus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiK-1x-v9b">
+                            <rect key="frame" x="0.0" y="41" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4C-Yd-Ts1">
+                            <rect key="frame" x="0.0" y="61.5" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléphone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg6-sf-gyd">
+                            <rect key="frame" x="0.0" y="82" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTW-y7-IyK">
+                            <rect key="frame" x="0.0" y="102.5" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localisation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-LR-v5e">
+                            <rect key="frame" x="0.0" y="123" width="694" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Upe-1t-QO7">
+                    <rect key="frame" x="8" y="487" width="710" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="fbq-tZ-fDh"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-ad-pID">
+                    <rect key="frame" x="16" y="285.5" width="694" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="HZo-zg-o1z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9k5-ad-pID" firstAttribute="centerX" secondItem="ulW-o2-HfJ" secondAttribute="centerX" id="026-vd-hAx"/>
+                <constraint firstAttribute="trailing" secondItem="ulW-o2-HfJ" secondAttribute="trailing" id="3fU-hP-FdY"/>
+                <constraint firstItem="Upe-1t-QO7" firstAttribute="top" secondItem="i8B-lL-R1A" secondAttribute="bottom" constant="16" id="9jq-gK-7Ae"/>
+                <constraint firstItem="uX6-sU-BNu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I45-Hn-cYV"/>
+                <constraint firstItem="ulW-o2-HfJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="INe-PL-Naq"/>
+                <constraint firstItem="9k5-ad-pID" firstAttribute="top" secondItem="uX6-sU-BNu" secondAttribute="top" id="LlD-BC-U7R"/>
+                <constraint firstAttribute="trailing" secondItem="i8B-lL-R1A" secondAttribute="trailing" constant="16" id="MDM-n8-4Jq"/>
+                <constraint firstItem="Upe-1t-QO7" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-10" id="NXT-rK-KYZ"/>
+                <constraint firstItem="uX6-sU-BNu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WrE-Ht-iFq">
+                    <variation key="heightClass=compact-widthClass=regular" constant="8"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="ulW-o2-HfJ" secondAttribute="bottom" id="Zey-gr-I1u"/>
+                <constraint firstAttribute="trailing" secondItem="Upe-1t-QO7" secondAttribute="trailing" constant="8" id="ahm-64-eId"/>
+                <constraint firstItem="i8B-lL-R1A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="cMz-Wr-Vfb"/>
+                <constraint firstItem="ulW-o2-HfJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fH1-g5-ab0"/>
+                <constraint firstItem="i8B-lL-R1A" firstAttribute="top" secondItem="9k5-ad-pID" secondAttribute="bottom" constant="10" id="maR-vk-Amo"/>
+                <constraint firstItem="9k5-ad-pID" firstAttribute="trailing" secondItem="i8B-lL-R1A" secondAttribute="trailing" id="meh-Dt-bL8"/>
+                <constraint firstItem="i8B-lL-R1A" firstAttribute="leading" secondItem="uX6-sU-BNu" secondAttribute="trailing" constant="16" id="qQR-qj-XLO"/>
+                <constraint firstItem="Upe-1t-QO7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="r2I-KA-KrX"/>
+                <constraint firstItem="9k5-ad-pID" firstAttribute="leading" secondItem="i8B-lL-R1A" secondAttribute="leading" id="tMX-IO-I3b"/>
+                <constraint firstItem="uX6-sU-BNu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="th5-vZ-gg4"/>
+                <constraint firstAttribute="trailing" secondItem="uX6-sU-BNu" secondAttribute="trailing" id="vxU-iq-cea"/>
+                <constraint firstItem="9k5-ad-pID" firstAttribute="top" secondItem="uX6-sU-BNu" secondAttribute="bottom" constant="10" id="xSd-nK-qrx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="I45-Hn-cYV"/>
+                    <exclude reference="th5-vZ-gg4"/>
+                    <exclude reference="vxU-iq-cea"/>
+                    <exclude reference="LlD-BC-U7R"/>
+                    <exclude reference="qQR-qj-XLO"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="026-vd-hAx"/>
+                    <exclude reference="xSd-nK-qrx"/>
+                    <exclude reference="cMz-Wr-Vfb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="th5-vZ-gg4"/>
+                    <include reference="LlD-BC-U7R"/>
+                    <include reference="qQR-qj-XLO"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="I45-Hn-cYV"/>
+                    <include reference="vxU-iq-cea"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="th5-vZ-gg4"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="backImage" destination="ulW-o2-HfJ" id="eMk-Ft-bgV"/>
+                <outlet property="cursusValueLabel" destination="YiK-1x-v9b" id="CrI-L4-8Yb"/>
+                <outlet property="evaluationPointLabel" destination="QEB-RN-BNh" id="wx2-PB-6be"/>
+                <outlet property="experienceBar" destination="Upe-1t-QO7" id="sWi-4g-bI6"/>
+                <outlet property="gradeValueLabel" destination="Z4C-Yd-Ts1" id="3Qy-me-bhT"/>
+                <outlet property="localisationLabel" destination="n4t-LR-v5e" id="qNp-dc-htT"/>
+                <outlet property="mailLabel" destination="mTW-y7-IyK" id="42p-3H-RSl"/>
+                <outlet property="nameLabel" destination="9k5-ad-pID" id="DVD-8z-f3y"/>
+                <outlet property="phoneLabel" destination="zg6-sf-gyd" id="ffs-rj-FIo"/>
+                <outlet property="portraitImage" destination="uX6-sU-BNu" id="nph-xK-Cx5"/>
+                <outlet property="walletValueLabel" destination="hIZ-dY-xLe" id="cng-eO-31O"/>
+            </connections>
+            <point key="canvasLocation" x="333.75" y="348.125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="globalBakcground" width="512" height="512"/>
+    </resources>
+</document>

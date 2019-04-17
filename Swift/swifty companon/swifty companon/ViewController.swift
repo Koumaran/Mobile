@@ -17,15 +17,32 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     let webService: WebService = WebService()
-    var users: [SearchResult] = []
+    var users: [User] = []
     
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.titleView = searchBar
-        
+				self.navigationController?.navigationBar.installBlurEffect()
+//				self.addBlurEffect()
+			
     }
+	
+		func addBlurEffect() {
+				let bounds = self.navigationController?.navigationBar.bounds
+				let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+				visualEffectView.frame = bounds!
+				visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+				self.navigationController?.navigationBar.addSubview(visualEffectView)
+			self.navigationController?.navigationBar.sendSubviewToBack(visualEffectView)
+				let backVisual = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+				backVisual.frame = self.view.bounds
+				backVisual.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+				self.view.addSubview(backVisual)
+				self.view.sendSubviewToBack(backVisual)
+		}
+
 
 
 }

@@ -15,7 +15,7 @@ struct TokenBox: Decodable {
     var getTime: Date?
 }
 
-struct SearchResult: Decodable {
+struct User: Decodable {
     let id: Int
     let login: String
     let url: String
@@ -60,13 +60,14 @@ class WebService {
         }.resume()
     }
     
-    func getUser(text: String, completion: @escaping ([SearchResult], Error?) -> Void) {
-        var result: [SearchResult] = []
+    func getUser(text: String, completion: @escaping ([User], Error?) -> Void) {
+        var result: [User] = []
         guard let token = token else {
             self.getToken()
             return
         }
         let api42: String = "https://api.intra.42.fr/v2/users?access_token=\(token.accessToken!)&range[login]=\(text.lowercased()),\(text.lowercased())z&sort=login"
+			print("api42: \(api42)")
         guard let url = URL(string: api42) else {
             return
         }
@@ -76,7 +77,7 @@ class WebService {
                 return
             }
             do {
-                result = try JSONDecoder().decode([SearchResult].self, from: data)
+                result = try JSONDecoder().decode([User].self, from: data)
                 completion(result, nil)
             } catch let jsonErr {
                 print("Failed to decode: ", jsonErr)
@@ -90,6 +91,7 @@ class WebService {
             return
         }
         if let url = URL(string: "\(url)?access_token=\(token.accessToken!)") {
+					print("ProfileUrl : \(url.absoluteString)")
             URLSession.shared.dataTask(with: url) { data, _, error in
                 guard let data = data , error == nil else {
                     completion(nil, error)
@@ -97,7 +99,7 @@ class WebService {
                 }
                 do {
                     let profile: Profile = try JSONDecoder().decode(Profile.self, from: data)
-                    print(profile)
+//                    print(profile)
                     completion(profile, nil)
                 } catch let jsonErr {
                     completion(nil, jsonErr)

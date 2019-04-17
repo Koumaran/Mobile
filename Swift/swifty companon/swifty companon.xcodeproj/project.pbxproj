@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E442A0A2237DEF800FE437B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E442A092237DEF800FE437B /* ProfileHeaderView.swift */; };
+		3E442A0C2237DF0400FE437B /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E442A0B2237DF0400FE437B /* ProfileHeader.xib */; };
+		3E442A1022386CD200FE437B /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E442A0F22386CD200FE437B /* UINavigationBar.swift */; };
 		3E540CBC21357B240069603E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E540CBB21357B240069603E /* ProfileModel.swift */; };
 		3E6F4C7021147B140079DCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C6F21147B140079DCCE /* AppDelegate.swift */; };
 		3E6F4C7221147B140079DCCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7121147B140079DCCE /* ViewController.swift */; };
@@ -14,11 +17,16 @@
 		3E6F4C7721147B150079DCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7621147B150079DCCE /* Assets.xcassets */; };
 		3E6F4C7A21147B150079DCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6F4C7821147B150079DCCE /* LaunchScreen.storyboard */; };
 		3E6F4C8221147E800079DCCE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F4C8121147E800079DCCE /* WebService.swift */; };
+		3E9CC3FE223A3FF50056384B /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CC3FC223A3FF50056384B /* CollectionTableViewCell.swift */; };
+		3E9CC3FF223A3FF50056384B /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9CC3FD223A3FF50056384B /* CollectionTableViewCell.xib */; };
 		3EF7370F213569FB007693CB /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7370E213569FB007693CB /* ResultCell.swift */; };
 		3EF7371121356EA3007693CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7371021356EA3007693CB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E442A092237DEF800FE437B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		3E442A0B2237DF0400FE437B /* ProfileHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
+		3E442A0F22386CD200FE437B /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		3E540CBB21357B240069603E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		3E6F4C6C21147B140079DCCE /* swifty companon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty companon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6F4C6F21147B140079DCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +36,8 @@
 		3E6F4C7921147B150079DCCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E6F4C7B21147B150079DCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E6F4C8121147E800079DCCE /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		3E9CC3FC223A3FF50056384B /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		3E9CC3FD223A3FF50056384B /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
 		3EF7370E213569FB007693CB /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		3EF7371021356EA3007693CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +53,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E442A0D2237E22C00FE437B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E540CBB21357B240069603E /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E442A0E2237E25E00FE437B /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				3E6F4C8121147E800079DCCE /* WebService.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		3E442A1122386CD700FE437B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E442A0F22386CD200FE437B /* UINavigationBar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3E6F4C6321147B140079DCCE = {
 			isa = PBXGroup;
 			children = (
@@ -63,17 +97,30 @@
 			isa = PBXGroup;
 			children = (
 				3E6F4C6F21147B140079DCCE /* AppDelegate.swift */,
+				3E442A1122386CD700FE437B /* Extensions */,
 				3E6F4C7121147B140079DCCE /* ViewController.swift */,
-				3EF7370E213569FB007693CB /* ResultCell.swift */,
 				3E6F4C7321147B140079DCCE /* Main.storyboard */,
 				3EF7371021356EA3007693CB /* ProfileViewController.swift */,
-				3E540CBB21357B240069603E /* ProfileModel.swift */,
-				3E6F4C8121147E800079DCCE /* WebService.swift */,
+				3E442A0D2237E22C00FE437B /* Model */,
+				3ED93D9922314D7E008BDC3D /* Cells */,
+				3E442A0E2237E25E00FE437B /* WebServices */,
 				3E6F4C7621147B150079DCCE /* Assets.xcassets */,
 				3E6F4C7821147B150079DCCE /* LaunchScreen.storyboard */,
 				3E6F4C7B21147B150079DCCE /* Info.plist */,
 			);
 			path = "swifty companon";
+			sourceTree = "<group>";
+		};
+		3ED93D9922314D7E008BDC3D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7370E213569FB007693CB /* ResultCell.swift */,
+				3E442A092237DEF800FE437B /* ProfileHeaderView.swift */,
+				3E442A0B2237DF0400FE437B /* ProfileHeader.xib */,
+				3E9CC3FC223A3FF50056384B /* CollectionTableViewCell.swift */,
+				3E9CC3FD223A3FF50056384B /* CollectionTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9CC3FF223A3FF50056384B /* CollectionTableViewCell.xib in Resources */,
+				3E442A0C2237DF0400FE437B /* ProfileHeader.xib in Resources */,
 				3E6F4C7A21147B150079DCCE /* LaunchScreen.storyboard in Resources */,
 				3E6F4C7721147B150079DCCE /* Assets.xcassets in Resources */,
 				3E6F4C7521147B140079DCCE /* Main.storyboard in Resources */,
@@ -148,10 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6F4C8221147E800079DCCE /* WebService.swift in Sources */,
+				3E442A1022386CD200FE437B /* UINavigationBar.swift in Sources */,
 				3E6F4C7221147B140079DCCE /* ViewController.swift in Sources */,
 				3EF7371121356EA3007693CB /* ProfileViewController.swift in Sources */,
 				3E540CBC21357B240069603E /* ProfileModel.swift in Sources */,
+				3E442A0A2237DEF800FE437B /* ProfileHeaderView.swift in Sources */,
 				3EF7370F213569FB007693CB /* ResultCell.swift in Sources */,
+				3E9CC3FE223A3FF50056384B /* CollectionTableViewCell.swift in Sources */,
 				3E6F4C7021147B140079DCCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV7JLT6T37;
 				INFOPLIST_FILE = "swifty companon/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VV7JLT6T37;
 				INFOPLIST_FILE = "swifty companon/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
