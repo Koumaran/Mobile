@@ -24,24 +24,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.titleView = searchBar
-				self.navigationController?.navigationBar.installBlurEffect()
+//		self.navigationController?.navigationBar.installBlurEffect()
 //				self.addBlurEffect()
+		
+		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+		self.navigationController?.navigationBar.shadowImage = UIImage()
+		self.navigationController?.navigationBar.isTranslucent = true
+		self.navigationController?.view.backgroundColor = .clear
 			
     }
 	
-		func addBlurEffect() {
-				let bounds = self.navigationController?.navigationBar.bounds
-				let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-				visualEffectView.frame = bounds!
-				visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-				self.navigationController?.navigationBar.addSubview(visualEffectView)
-			self.navigationController?.navigationBar.sendSubviewToBack(visualEffectView)
-				let backVisual = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-				backVisual.frame = self.view.bounds
-				backVisual.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-				self.view.addSubview(backVisual)
-				self.view.sendSubviewToBack(backVisual)
-		}
+//	func addBlurEffect() {
+//			let bounds = self.navigationController?.navigationBar.bounds
+//			let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+//			visualEffectView.frame = bounds!
+//			visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//			self.navigationController?.navigationBar.addSubview(visualEffectView)
+//		self.navigationController?.navigationBar.sendSubviewToBack(visualEffectView)
+//			let backVisual = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+//			backVisual.frame = self.view.bounds
+//			backVisual.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//			self.view.addSubview(backVisual)
+//			self.view.sendSubviewToBack(backVisual)
+//	}
 
 
 
