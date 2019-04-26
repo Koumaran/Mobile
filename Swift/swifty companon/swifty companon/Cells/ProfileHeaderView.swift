@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ProfileHeaderView: UIView {
-	@IBOutlet weak var portraitImage: UIImageView!
-	@IBOutlet weak var backImage: UIImageView!
+class ProfileHeaderView: UICollectionViewCell {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var experienceBar: UIProgressView!
 	@IBOutlet weak var walletValueLabel: UILabel!
@@ -22,9 +20,7 @@ class ProfileHeaderView: UIView {
     @IBOutlet weak var localisationLabel: UILabel!
     
 	
-	
 	func setupHeaderView(_ profile: Profile) {
-		portraitImage.image = profile.imageConverted
 		nameLabel.text = profile.displayname
 		walletValueLabel.text = "Wallet  \(profile.wallet) ₳"
 		evaluationPointLabel.text = "Evaluation points  \(profile.correctionPoint)"
@@ -45,7 +41,22 @@ class ProfileHeaderView: UIView {
             lvl.textColor = .white
             lvl.textAlignment = .center
             experienceBar.addSubview(lvl)
+            lvl.translatesAutoresizingMaskIntoConstraints = false
+            lvl.centerXAnchor.constraint(equalTo: experienceBar.centerXAnchor).isActive = true
+            lvl.centerYAnchor.constraint(equalTo: experienceBar.centerYAnchor).isActive = true
 		}
 	}
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        return layoutAttributes
+    }
 
 }

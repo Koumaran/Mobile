@@ -30,7 +30,8 @@ class ProfileController: UICollectionViewController, UICollectionViewDelegateFlo
 		
 		// layout customisation
 		if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-			layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+//            layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+            layout.estimatedItemSize = CGSize(width: collectionView.frame.width - 20, height: 100)
 		}
 		setupCollectionView()
 
@@ -40,9 +41,11 @@ class ProfileController: UICollectionViewController, UICollectionViewDelegateFlo
 		// Register cell classes
 		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
 		collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(UINib(nibName: "ProfileHeader", bundle: nil), forCellWithReuseIdentifier: "contentHeader")
 		collectionView.contentInsetAdjustmentBehavior = .never
 		let iv = UIImageView(image: UIImage(named: "globalBakcground"))
 		collectionView.backgroundView = iv
+        
 	}
 
     // MARK: UICollectionViewDataSource
@@ -60,10 +63,14 @@ class ProfileController: UICollectionViewController, UICollectionViewDelegateFlo
 	}
 	
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+        return 4
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contentHeader", for: indexPath) as? ProfileHeaderView {
+            cell.setupHeaderView(profile)
+            return cell
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     
         cell.backgroundColor = .black
@@ -71,7 +78,7 @@ class ProfileController: UICollectionViewController, UICollectionViewDelegateFlo
         return cell
     }
 	
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: view.frame.width - 2 * padding, height: 50)
-	}
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: view.frame.width - 2 * padding, height: 50)
+//    }
 }

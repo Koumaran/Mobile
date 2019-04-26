@@ -104,7 +104,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             DispatchQueue.main.async {
 //                let profileView = self.storyboard?.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
 //                profileView.profile = profile
-				let profileView = ProfileController(collectionViewLayout: UICollectionViewFlowLayout())
+				let profileView = ProfileController(collectionViewLayout: StretchyHeaderLayout())
 				profileView.profile = profile
                 activityIndicator.removeFromSuperview()
                 self.navigationController?.pushViewController(profileView, animated: true)
